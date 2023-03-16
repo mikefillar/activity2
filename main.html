@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Clinic Care</title>
+    <style>
+        span
+            {
+                color:red;
+                font-size: 11px;
+            }
+    </style>
+</head>
+<body class="p-3">
+    <div class="container bg-info p-5">
+        <h4 class="d-flex">Patient information Form <a href="index.html" class="btn btn-secondary ms-auto">Logout</a></h4>
+        
+        <h6>Put N/A if not applicable</h6>
+        <h6>All fields in <span>*</span> are required!</h6><br>
+        <form action="" class="form" id="patientForm">
+            <label for="fName" class="form-label col-lg-3">First Name <span id="span1">*</span></label>
+            <label for="mName" class="form-label col-lg-3">Middle Name <span id="span2">*</span></label>
+            <label for="lName" class="form-label col-lg-3">Last Name <span id="span3">*</span></label>
+            <input type="text" class=" col-lg-3" name="fname" id="fName" required>
+            <input type="text" class=" col-lg-3" name="mname" id="mName" required>
+            <input type="text" class=" col-lg-3" name="lname" id="lName" required> <br>
+            <br><br>
+            <label for="bday" class=" col-lg-3">Birth Date <span id="span4">*</span></label>
+            <label for="cNumber" class=" col-lg-3">Phone Number <span id="span5">*</span></label>
+            <label for="gender" class=" col-lg-3">Gender <span id="span6">*</span></label>
+            <input type="date" name="date" id="date" class=" col-lg-3" min="1920-01-01" required>
+            <input type="text" name="cNumber" id="cNumber" class=" col-lg-3" required>
+            <input type="radio" name="gender" id="radio" value="Male">Male
+            <input type="radio" name="gender" id="radio" value="Female">Female <br><br>
+            <label for="address">Address <span id="span7">*</span></label><br>
+            <input type="text" name="address" id="address" size="102" required> <br><br>
+            <h6>Medical History : </h6>
+            <div class="row">
+                <div class="col-5">
+                    <input type="checkbox" name="medHistory" id="asthma" value="Asthma">Asthma <br>
+                    <input type="checkbox" name="medHistory" id="cancer" value="Cancer">Cancer <br>
+                    <input type="checkbox" name="medHistory" id="cardiacDisease" value="Cardiac Disease">Cardiac Disease <br>
+                    <input type="checkbox" name="medHistory" id="diabetes" value="Diabetes">Diabetes <br>
+                    <input type="checkbox" name="medHistory" id="hypertension" value="Hypertension">Hypertension <br>
+                    <input type="checkbox" name="medHistory" id="psychiatricDisorder" value="Psychiatric Disorder">Psychiatric Disorder <br>
+                    <input type="checkbox" name="medHistory" id="others" value="Others">Others
+                </div>
+                <div class="col-4">
+                    <h6>Current Symptoms : <span id="span8">*</span> </h6>
+                    <select name="symptoms" id="symptoms">
+                    <option>Select Symptoms</option>
+                    <option value="Chest Pain">Chest Pain</option>
+                    <option value="Respiratory">Respiratory</option>
+                    <option value="Respiratory">Hematological</option>
+                    <option value="Respiratory">Lymphatic</option>
+                    <option value="Respiratory">Neurological</option>
+                </select> <br><br>
+                <h6>Are you taking medication? <span id="span9">*</span></h6>
+                <input type="radio" name="med" id="yes" onclick="medInputEnable()" value="Yes">Yes
+                <input type="radio" name="med" id="radio2" onclick="medInputDisable()" value="No">No <br>
+                <input type="text" name="medInput" id="med" disabled>
+                </div>
+            </div>
+            <br>
+            <button type="button" id="submit" class="btn btn-primary">Submit</button>
+            <button type="clear" class="btn btn-warning">Clear</button>
+        </form>
+    </div>
+
+    <script src="JS/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
