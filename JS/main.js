@@ -90,22 +90,34 @@ function patientForm(event)
             {
                 document.getElementById("span9").innerHTML += "This field is required";
             }
-        // // console.log(takingMeds);
-        // let patient = {
-        //     fName: fName,
-        //     mName: mName,
-        //     lName: lName,
-        //     bDate: bDate,
-        //     cNum: cNum,
-        //     gender: gender,
-        //     address: address,
-        //     medHistory: result,
-        //     currentSymptoms: currentSymptoms,
-        //     takingMeds: takingMeds
-        // }
-        // // console.log(result);
-        // // console.log(patient);
-        // // localStorage.setItem("Patients",JSON.stringify(patient));
+        let patient = {
+            fName: fName,
+            mName: mName,
+            lName: lName,
+            bDate: bDate,
+            cNum: cNum,
+            gender: gender,
+            address: address,
+            medHistory: result,
+            currentSymptoms: currentSymptoms,
+            takingMeds: takingMeds
+        }
+        let answer = prompt("Are you sure you fillout the form correctly?\n Type \"yes\" if you wish to continue\n Type \"no\" if not");
+        if (answer=="yes")
+            {
+                alert("Your information was successfully addedd!");
+                localStorage.setItem("Patients",JSON.stringify(patient));
+            }
+        else if (answer=="no")
+            {
+                alert("Please verify your input");
+            }
+        else
+            {
+                alert("Please choose from yer or no");
+            }
+                
+
     }
 function medInputEnable()
     {
